@@ -67,6 +67,12 @@ Construyo productos digitales completos: desde interfaces en React hasta APIs ro
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 
+### Mobile & Desktop
+
+![Swift](https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-0071E3?style=for-the-badge&logo=swift&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
+
 ### Bases de Datos
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -83,6 +89,16 @@ Construyo productos digitales completos: desde interfaces en React hasta APIs ro
 
 <table>
 <tr>
+<td width="50%">
+
+### MacNTFS
+App nativa macOS para lectura y escritura en discos NTFS sin reformatear. Deteccion automatica de drives, montaje con soporte completo R/W, file manager integrado con drag-and-drop y verificacion de integridad.
+
+`Swift` `SwiftUI` `DiskArbitration` `XPC Services` `macFUSE` `ntfs-3g`
+
+[![Ver Repo](https://img.shields.io/badge/Ver_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/JhojanAlexanderCalambasRamirez/MacNTFS) [![Release](https://img.shields.io/badge/v1.0.0-f59e0b?style=flat-square)](https://github.com/JhojanAlexanderCalambasRamirez/MacNTFS/releases)
+
+</td>
 <td width="50%">
 
 ### GIS & Catastro
@@ -126,6 +142,9 @@ Sitio web personal con selector de roles animado (Fullstack/Backend/Frontend), d
 
 </td>
 </tr>
+</table>
+
+> **Proyecto destacado:** [MacNTFS](https://github.com/JhojanAlexanderCalambasRamirez/MacNTFS) resuelve un problema real de macOS -- soporte nativo NTFS read/write sin reformatear discos. Construido 100% en Swift 6 + SwiftUI.
 </table>
 
 ---
