@@ -123,12 +123,12 @@ Pipeline MLOps completo: modelo DeiT-Tiny + SVM, API REST con FastAPI + gRPC, de
 <tr>
 <td width="50%">
 
-### Monitor de Bateria en Tiempo Real
-App de escritorio con comunicacion bidireccional via Socket.IO, UI reactiva para datos en vivo, persistencia en Firebase/Firestore, empaquetada con Electron.
+### BatteryIPhoneStatus
+App nativa para monitorear bateria del iPhone desde menu bar de macOS en tiempo real. Descubrimiento automatico via Bonjour/mDNS, comunicacion JSON sobre TCP, notificaciones nativas en umbrales criticos (20%, 10%, 100%).
 
-`Node.js` `Express.js` `Socket.IO` `Electron.js` `JavaScript` `Firebase`
+`Swift` `SwiftUI` `Network.framework` `Bonjour` `XcodeGen` `SPM`
 
-**Metricas:** Latencia <500ms
+[![Ver Repo](https://img.shields.io/badge/Ver_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/JhojanAlexanderCalambasRamirez/BatteryIPhoneStatus)
 
 </td>
 <td width="50%">
