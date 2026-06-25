@@ -72,6 +72,8 @@ Construyo productos digitales completos: desde interfaces en React hasta APIs ro
 ![Swift](https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white)
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-0071E3?style=for-the-badge&logo=swift&logoColor=white)
 ![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
+![Tauri](https://img.shields.io/badge/Tauri-24C8D8?style=for-the-badge&logo=tauri&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 
 ### Bases de Datos
 
@@ -92,7 +94,7 @@ Construyo productos digitales completos: desde interfaces en React hasta APIs ro
 <td width="50%">
 
 ### MacNTFS
-App nativa macOS para lectura y escritura en discos NTFS sin reformatear. Deteccion automatica de drives, montaje con soporte completo R/W, file manager integrado con drag-and-drop y verificacion de integridad.
+App nativa macOS para lectura y escritura en discos NTFS sin reformatear. Deteccion automatica de drives via DiskArbitration, montaje con soporte completo R/W mediante macFUSE + ntfs-3g, file manager integrado con drag-and-drop, verificacion de integridad de archivos, indicador de almacenamiento y notificaciones nativas. Interfaz bilingue (EN/ES) con dark mode.
 
 `Swift` `SwiftUI` `DiskArbitration` `XPC Services` `macFUSE` `ntfs-3g`
 
@@ -101,22 +103,12 @@ App nativa macOS para lectura y escritura en discos NTFS sin reformatear. Detecc
 </td>
 <td width="50%">
 
-### GIS & Catastro
-Plataforma fullstack para gestion de +50,000 registros catastrales bajo estandar LADM-COL v4.1. APIs REST con Django, vistas interactivas en React para geometrias espaciales.
+### MdConverter
+App de escritorio cross-platform que convierte documentos locales (PDF, DOCX, XLSX, PPTX, CSV, HTML, EPUB y mas) a Markdown limpio y estructurado. Arquitectura de tres capas: frontend React + TypeScript, backend Rust via Tauri v2, y sidecar Python con MarkItDown de Microsoft. Drag-and-drop, conversion por lotes, progreso por archivo, tema claro/oscuro, interfaz bilingue (EN/ES).
 
-`Python` `Django` `DRF` `GeoDjango` `React` `PostgreSQL` `PostGIS`
+`Tauri` `React` `TypeScript` `Rust` `Python` `MarkItDown`
 
-**Metricas:** +50k registros | ~40% optimizacion
-
-</td>
-<td width="50%">
-
-### Clasificacion de Imagenes con IA
-Pipeline MLOps completo: modelo DeiT-Tiny + SVM, API REST con FastAPI + gRPC, despliegue containerizado en Azure con escalado automatico.
-
-`Python` `FastAPI` `Docker` `Azure ML` `Kubernetes` `MLflow` `PyTorch`
-
-**Metricas:** Cold start <30s | Escalado 3x
+[![Ver Repo](https://img.shields.io/badge/Ver_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/JhojanAlexanderCalambasRamirez/MdConverter) [![Release](https://img.shields.io/badge/v1.0.0-f59e0b?style=flat-square)](https://github.com/JhojanAlexanderCalambasRamirez/MdConverter/releases)
 
 </td>
 </tr>
@@ -124,7 +116,7 @@ Pipeline MLOps completo: modelo DeiT-Tiny + SVM, API REST con FastAPI + gRPC, de
 <td width="50%">
 
 ### BatteryIPhoneStatus
-App nativa para monitorear bateria del iPhone desde menu bar de macOS en tiempo real. Descubrimiento automatico via Bonjour/mDNS, comunicacion JSON sobre TCP, notificaciones nativas en umbrales criticos (20%, 10%, 100%).
+Sistema nativo de dos modulos para monitorear bateria del iPhone desde menu bar de macOS en tiempo real. Descubrimiento automatico de dispositivos via Bonjour/mDNS en red local, comunicacion JSON sobre TCP con Network.framework (NWListener/NWBrowser/NWConnection), notificaciones nativas en umbrales criticos (20%, 10%, 100%), reconexion automatica y actualizaciones cada 60 segundos. Arquitectura: BatteryShared (Swift Package), BatteryMonitorMac (receptor macOS) y BatterySenderIOS (emisor iOS).
 
 `Swift` `SwiftUI` `Network.framework` `Bonjour` `XcodeGen` `SPM`
 
@@ -133,8 +125,30 @@ App nativa para monitorear bateria del iPhone desde menu bar de macOS en tiempo 
 </td>
 <td width="50%">
 
+### GIS & Catastro
+Plataforma fullstack para gestion de +50,000 registros catastrales bajo estandar internacional LADM-COL v4.1. APIs RESTful con Django REST Framework, autenticacion y validaciones a nivel de servicio, vistas interactivas en React para consulta y edicion de geometrias espaciales (GeoJSON, Shapefile), transformaciones de coordenadas EPSG:9377/4326 y validaciones topologicas con GeoDjango y PostGIS.
+
+`Python` `Django` `DRF` `GeoDjango` `React` `PostgreSQL` `PostGIS`
+
+**Metricas:** +50k registros | ~40% optimizacion en consultas espaciales
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### Clasificacion de Imagenes
+Pipeline MLOps completo: modelo DeiT-Tiny + SVM entrenado con MLflow en Azure ML (cluster elastico, escala a 0), API REST con FastAPI + canal gRPC desplegados en Azure Container Instance, Docker multi-arquitectura (linux/amd64) desde Apple Silicon a Azure Container Registry, y Kubernetes con HPA para escalado automatico ante picos de trafico 3x.
+
+`Python` `FastAPI` `Docker` `Azure ML` `Kubernetes` `MLflow` `PyTorch`
+
+**Metricas:** Cold start <30s | Escalado 3x
+
+</td>
+<td width="50%">
+
 ### Portafolio Personal
-Sitio web personal con selector de roles animado (Fullstack/Backend/Frontend), dark/light mode, SEO optimizado, responsive y accesible.
+Sitio web personal con selector de roles animado (Fullstack/Backend/Frontend) que cambia bio y tagline dinamicamente, dark/light mode con localStorage e inline script anti-flash, datos reales extraidos de hojas de vida, SEO metadata en espanol, responsive y accesible. Paleta amber/warm con gradientes personalizados.
 
 `Next.js` `TypeScript` `Tailwind CSS` `Framer Motion`
 
@@ -142,9 +156,6 @@ Sitio web personal con selector de roles animado (Fullstack/Backend/Frontend), d
 
 </td>
 </tr>
-</table>
-
-> **Proyecto destacado:** [MacNTFS](https://github.com/JhojanAlexanderCalambasRamirez/MacNTFS) resuelve un problema real de macOS -- soporte nativo NTFS read/write sin reformatear discos. Construido 100% en Swift 6 + SwiftUI.
 </table>
 
 ---
